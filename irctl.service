@@ -1,0 +1,14 @@
+[Unit]
+Description=IR Transmitter.
+
+[Service]
+User=hogehoge
+WorkingDirectory=/home/hogehoge/irctl
+ExecStart=/home/hogehoge/irctl/irctl.py
+Type=simple
+Restart=always
+Environment=BEEBOTTE_TOKEN=token_hogehoge
+
+[Install]
+WantedBy=multi-user.target
+
